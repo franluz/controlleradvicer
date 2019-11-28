@@ -1,0 +1,19 @@
+spring:
+   application:
+      name: '@project.name@'
+      version: '@project.version@'
+      description: '@project.description@'
+   cache:
+      jcache:
+         config: ehcache3.xml
+   jpa:
+      show-sql: false
+   activemq:
+      broker-url: tcp://localhost:61616?jms.prefetchPolicy.queuePrefetch=1
+      user: null
+      password: null
+      close-timeout: 600000
+queue:
+   cuidado: ERRO_NO_CUIDADO_CORDENADO
+server:
+   port: 8088

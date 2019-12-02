@@ -1,4 +1,4 @@
-package com.advicer.br;
+package com.advicer.br.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -9,17 +9,17 @@ import com.advicer.br.exception.RestTemplateResponseErrorHandler;
 import com.advicer.br.model.response.Response;
 
 @Service
-public class BarConsumerService {
+public class SalesForceService {
 	@Autowired
 	private RestTemplate restTemplate;
 	private RestTemplateBuilder restTemplateBuilder;
 	
 	@Autowired
-	public BarConsumerService(RestTemplateBuilder restTemplateBuilder) {
+	public SalesForceService(RestTemplateBuilder restTemplateBuilder) {
 		this.restTemplateBuilder = restTemplateBuilder;
 		this.restTemplateBuilder.errorHandler(new RestTemplateResponseErrorHandler()).build();
 	}
-	public Response fetchBarById(String barId) {
-		return restTemplate.getForObject("/bars/4242", Response.class);
+	public Response getSalesforceDependences(String barId) {
+		return restTemplate.getForObject("/urlSalesForce/4242", Response.class);
 	}
 }

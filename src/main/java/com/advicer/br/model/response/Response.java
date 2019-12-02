@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.Data;
+@Data
 public class Response {
 
 	private LocalDateTime data;
@@ -24,45 +26,7 @@ public class Response {
 		detalhes = new ArrayList<>();
 	}
 
-	public List<String> getDetalhes() {
-		return detalhes;
-	}
 
-	public void setDetalhes(List<String> detalhes) {
-		this.detalhes = detalhes;
-	}
-
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
-	public LocalDateTime getData() {
-		return data;
-	}
-
-	public void setData(LocalDateTime data) {
-		this.data = data;
-	}
-
-	public int getCodStatus() {
-		return codStatus;
-	}
-
-	public void setCodStatus(int codStatus) {
-		this.codStatus = codStatus;
-	}
-
-	public boolean isSucesso() {
-		return sucesso;
-	}
-
-	public void setSucesso(boolean sucesso) {
-		this.sucesso = sucesso;
-	}
 
 }
 
